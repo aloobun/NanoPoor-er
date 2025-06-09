@@ -561,7 +561,7 @@ class Transformer(nn.Module):
              ]
         else:
             optimizers = [
-                Muon(muon_params, lr=0.02, momentum=0.95, rank=0, world_size=1),
+                Muon(muon_params, lr=0.02, momentum=0.95),
                 torch.optim.AdamW(adamw_params, lr=learning_rate, betas=(0.90, 0.95), weight_decay=weight_decay)
             ]
         return optimizers
